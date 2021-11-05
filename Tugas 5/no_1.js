@@ -7,19 +7,13 @@ Program Array
 
 //menyusun array berdasarkan abjad
 let Fruits = [ 'Apel', 'Pisang', 'Jambu', 'Anggur', 'Pepaya', 'Duku', 'Durian', 'Jeruk', 'Mangga', 'Manggis'];
-Fruits.sort(); 
-console.log(Fruits);
+let buah =[]
 
-//mengemlompokan array
-console.log("Pengelompokan buah");
-let A = ['Apel']
-let D = ['Duku']
-let J = ['Jambu']
-let M = ['Mangga']
-let P = ['Pepaya']
-A.push('Anggur');
-D.push('Durian');
-J.push('Jeruk');
-M.push('Manggis');
-P.push('Pisang');
-console.log(A,D,J,M,P);
+for(let i=0;< Fruits.length;i++){
+    let hurufAwal = Fruits[i].substring(0,1);
+    if(hurufAwal=="A"){
+        buah.push(Fruits[i]);
+    }
+}
+
+console.log(buah);
