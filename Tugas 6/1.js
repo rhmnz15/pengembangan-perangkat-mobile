@@ -1,44 +1,44 @@
 let dataSiswa = [
-    {
-        nama: "Budi Sastro",
-        nilai: {
-            "Programming": 90,
-            "Database" : 60
-        }
-    },
-    {
-        nama: "Raden Rahmad",
-        nilai: {
-            "Programming": 60,
-            "Database" : 80
-        }
-    },
-    {
-        nama: "Ahmad Latif",
-        nilai: {
-            "Programming": 75,
-            "Database" : 90
-        }
-    },
+	{
+		nama : "Budi Santoso",
+		nilai : {
+			"programming" : 90,
+			"database" : 60
+		}
+	},
+	{
+		nama : "Raden Rahmad",
+		nilai : {
+			"programming" : 60,
+			"database" : 80
+		}
+	},
+	{
+		nama : "Ahmad Latif",
+		nilai : {
+			"programming" : 75,
+			"database" : 90
+		}
+	},
 ];
 
-let program = []
-let data = []
-let lulus_pro = "'Lulus Programming :'"
-let lulus_dat = "'Lulus Database :'"
+let programming = []
+let database = []
+
 for (let i=0; i<dataSiswa.length; i++){
-    let lulus_pro = dataSiswa[i].nilai["Programming"];
-    let lulus_dat = dataSiswa[i].nilai["Database"];
+    let lulus_pro = dataSiswa[i].nilai["programming"];
+    let lulus_dat = dataSiswa[i].nilai["database"];
     
     if (lulus_pro > 70) {
-        program.push(dataSiswa[i].nama)
-
-    }if (lulus_dat > 70) {
-        data.push(dataSiswa[i].nama)
+        programming.push(dataSiswa[i].nama)
     }
-    else{
-      
+    if (lulus_dat > 70) {
+        database.push(dataSiswa[i].nama)
     }
 }
-console.log(lulus_pro, program);
-console.log(lulus_dat, data);
+let hasil = {
+	"lulus programming" : programming,
+	"lulus database" : database
+}
+
+console.log(hasil);
